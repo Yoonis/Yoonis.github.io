@@ -29,11 +29,3 @@ article ul {
 	padding: 0px;
 	margin: 0px;
 }
-
-.footer {
-	clear: both;
-	position: fixed;
-	display: block;
-	bottom: 0px;
-	margin-left: 45%;
-}

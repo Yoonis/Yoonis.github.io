@@ -1,0 +1,17 @@
+.quill {
+	float: left;
+	margin-left: -3%;
+}
+
+.posts {
+	float: left;
+	font-size: 1.5em;
+}
+
+.posts li {
+	padding-bottom: 1em;
+}
+
+.posts ul {
+	list-style-type: none;
+}
