@@ -40,7 +40,7 @@ a:visited {
 }
 
 a:hover {
-	color: #4095bf;
+	text-decoration: underline;
 }
 
 aside ul {
@@ -56,4 +56,12 @@ aside li {
 aside li ul {
 	margin-top: 0px;
 	padding-left: 20px;
+}
+
+.footer {
+	clear: both;
+	position: fixed;
+	display: block;
+	bottom: 0px;
+	margin-left: 45%;
 }
