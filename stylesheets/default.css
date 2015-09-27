@@ -1,3 +1,59 @@
 html {
-	font-family: sans-serif;
+	font-family: Raleway, sans-serif;
+	font-size: 18px;
+	color: #668899;
+}
+
+.home {
+	font-size: 40px;
+	display: block;
+	margin: 30px 10px 30px 25px;
+}
+
+.home a {
+	color: #4095bf;
+	text-decoration: none;
+}
+
+.home a:hover {
+	font-weight: bold;
+}
+
+.sidebar {
+	clear: both;
+	float: left;
+	max-width: 33%;	
+	margin-right: 5%;
+	padding-left: 1%;
+	padding-right: 3%;
+	border-right: 1px dashed #5C5C8A;
+	font-size: 20px;
+}
+
+a:link {
+	color: #668899;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #4095bf;
+}
+
+a:hover {
+	color: #4095bf;
+}
+
+aside ul {
+	padding-left: 10px;
+	margin: 18px 0px 8px 0px;
+}
+
+aside li {
+	padding-bottom: 14px;
+	list-style-type: none;
+}
+
+aside li ul {
+	margin-top: 0px;
+	padding-left: 20px;
 }
