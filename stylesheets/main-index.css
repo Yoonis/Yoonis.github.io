@@ -1,0 +1,39 @@
+.avatar {
+	float: left;
+	margin-right: 5%;
+}
+
+.text {
+	padding-left: 1%;
+	float: left;
+	max-width: 33%;	
+	font-size: 24px;
+}
+
+.text p {
+	margin-bottom: 10%;
+}
+
+.links a {
+	text-decoration: none;
+	padding: .5em 1em .5em 0em;
+}
+
+.links li {
+	list-style-type: none;
+	display: inline-block;
+	margin-bottom: 3%;
+}
+
+article ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.footer {
+	clear: both;
+	position: fixed;
+	display: block;
+	bottom: 0px;
+	margin-left: 45%;
+}
