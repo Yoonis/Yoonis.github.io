@@ -1,13 +1,20 @@
+body {
+	background: url("../imgs/boat.png");
+  	background-position: center;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+ }
+
 .avatar {
 	float: left;
-	margin-right: 5%;
+	margin-right: 60px;
 }
 
 .text {
-	padding-left: 1%;
 	float: left;
-	max-width: 33%;	
-	font-size: 24px;
+	padding-left: 10px;
+	max-width: 38%;	
+	font-size: 1.4em;
 }
 
 .text p {
