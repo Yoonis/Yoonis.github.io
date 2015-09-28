@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSS Concepts</title>
+	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+</head>
+
+<body>
+    
+    <nav>
+		<header class="home">
+			<a href="http://yoonis.github.io/">Eunice Do</a>
+		</header>
+		<aside class="sidebar">
+		<ul>
+			<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
+			
+			<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
+						
+			<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
+			<li>	
+				<ul>
+					<li><a href="http://yoonis.github.io/blog/css-concepts.html">DBC Week 3: CSS Concepts</a></li>
+					<li><a href="http://yoonis.github.io/blog/css.html">DBC Week 3: CSS</a></li>
+					<li><a href="http://yoonis.github.io/blog/git.html">DBC Week 1: git & GitHub</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
+		</ul>
+		</aside>
+	</nav>
+
+	<section>
+
+		<article>
+			<h1>Spacing Elements, Technically...</h1>
+			<h4>9.28.15</h4>
+			
+			<p>If you've ever found yourself wondering what the difference between Margin, Border, and Padding is, then by all means - read on.
+			</p>
+			
+			<p>
+				Take a good look at the figure below. This is called the Box Model, and it depicts the various layers of a page element.<br>
+				<img src="../imgs/boxmodel.gif" alt="Box Model">
+			</p>
+
+			<p>
+				Let's start from the inside out. We see that our site content is first encased in a layer called <b>Padding</b>. This is the space between the content and the border surrounding the content. You can choose to have a lot of padding, or none at all.
+				The second layer is the <b>Border</b>. This is the defined edge around your content that you can choose to display in various styles (such as dashed lines, solid lines, dotted lines, etc). Or, you could choose not to display a border at all.
+				The third layer is the <b>Margin</b>. This is space which you can choose to append outside of the element's border to further pad the space between this element and this element's neighbors.
+			</p>
+
+			<p>
+				Each layer has 4 sides. You can choose to set the Margin and Padding of each side with the same value. You can also set each side with a different value in one fell swoop by having 4 values to 1 property. For example, "margin 1em, 0em, 1em, 0em" will append the given space values outside of the border in a clockwise fashion: <b>top, right, bottom, and left, respectively</b>.
+			</p>
+
+			<p>
+				As a final tip, <b>whenever possible, try to set the spacing values in a flexible unit</b>, such as em or %, rather than px. This is because px is a highly specific pixel value with no flexibility or regard to screen or page size. 1em is equal to the default font size on a user's device, and % is just a percentage of the whole page container. Keeping this tip in mind will make your life a lot easier when you deal with page re-sizing and scaling. 
+			</p>
+			
+			<div class="left-arrow">
+				<h4><a href="http://yoonis.github.io/blog/css.html">&#8610; Previous Post</a></h4>
+			</div>
+			
+			<div class="right-arrow">	
+				<h4><a href="#">Next Post &#8611;</a></h4>
+			</div>
+		
+		</article>
+	</section>
+
+	<footer class="footer">
+  		<p>(c) 2015 Eunice Do</p>
+	</footer>
+
+</body>
+
+</html>
