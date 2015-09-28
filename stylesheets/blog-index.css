@@ -1,12 +1,15 @@
-.quill {
-	float: left;
-	margin-left: -3%;
+body {
+	background-image: url("../imgs/quill.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
 }
 
 .posts {
 	float: left;
-	max-width: 33%;
-	font-size: 1.5em;
+	font-size: 1.6em;
+	min-height: 600px;
+	min-width: 480px;
 }
 
 .posts li {
