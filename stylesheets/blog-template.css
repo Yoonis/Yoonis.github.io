@@ -1,0 +1,16 @@
+.left-arrow {
+	float: left;
+}
+
+.right-arrow {
+	float: right;
+}
+
+article {
+	margin-right: 5%;
+	margin-top: 3%;
+}
+
+article p {
+	margin: 10px 0px 10px 0px;
+}
