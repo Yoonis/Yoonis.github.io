@@ -32,12 +32,12 @@ html {
 }
 
 a:link {
-	color: #668899;
+	color: #4095bf;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #4095bf;
+	color: #CC6699;
 }
 
 a:hover {
@@ -57,6 +57,11 @@ aside li {
 aside li ul {
 	margin-top: 0px;
 	padding-left: 25px;
+}
+
+.important {
+	font-style: italic;
+	text-decoration: underline;
 }
 
 .footer {
