@@ -35,3 +35,8 @@ article ul {
 	padding: 0px;
 	margin: 0px;
 }
+
+.icon-linkedin.bump-up {
+	position: relative;
+	top: -2px;
+}
