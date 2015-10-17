@@ -1,5 +1,5 @@
 html {
-	font-family: Raleway, sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 1.1em;
 	color: #668899;
 	box-sizing: border-box;
@@ -12,7 +12,7 @@ html {
 }
 
 .home a {
-	color: #4095bf;
+	color: #CC6699;
 	text-decoration: none;
 }
 
@@ -32,12 +32,12 @@ html {
 }
 
 a:link {
-	color: #4095bf;
+	color: #CC6699;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #CC6699;
+	color: #4095bf;
 }
 
 a:hover {
@@ -60,13 +60,12 @@ aside li ul {
 }
 
 .important {
-	font-style: italic;
+	font-weight: 600;
 	text-decoration: underline;
 }
 
 .footer {
 	clear: both;
-	position: fixed;
-	bottom: 0px;
-	padding-left: 45%;
+	margin-left: 45%;
+	padding-top: 1em;
 }
