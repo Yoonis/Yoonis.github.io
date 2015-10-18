@@ -8,6 +8,9 @@
   	<link rel="stylesheet" type="text/css" href="stylesheets/main-index.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   	<link rel="stylesheet" type="text/css" href="stylesheets/icons.css">
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/color-brewer.min.css">
+	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
@@ -39,10 +42,10 @@
 				<li>	
 					<ul>
 						<li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
-						<li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Ruby Enumerables</a></li>
+						<li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
 						<li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
-						<li><a href="http://yoonis.github.io/blog/arrays-hashes.html">DBC Week 4: Ruby Arrays & Hashes</a></li>
-						<li><a href="http://yoonis.github.io/blog/css-concepts.html">DBC Week 3: CSS Concepts</a></li>
+						<li><a href="http://yoonis.github.io/blog/arrays-hashes.html">Ruby Arrays & Hashes</a></li>
+						<li><a href="http://yoonis.github.io/blog/css-concepts.html">CSS Concepts</a></li>
 						<li><a href="http://yoonis.github.io/blog/">More...</a></li>
 					</ul>
 				</li>	
@@ -59,15 +62,33 @@
 		</div>
 
 		<article class="text">
-			<p>
-				"Lorem ipsum text. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-			</p>
-			<ul class="links">
-				<li>Follow Me On:</li><br>
-				<li><a href="https://www.linkedin.com/in/edo11"><span class="icon-linkedin bump-up"></span></a></li>
-				<li><a href="https://github.com/Yoonis"><span class="icon-github"></span></a></li>
-				<li><a href="https://twitter.com/Eunice_Tries"><span class="icon-twitter"></span></a></li>
-			</ul>
+			<pre><code class="ruby">def bio
+  
+  name = "Eunice Do"
+  
+  locations = ["New York", "Salamanca, Spain"]
+  
+  education = "BBA in International Business"
+  
+  some_interests = ["gym", "Spanish", "drip coffee", "music"]
+  
+  print "Hello from #{locations[0]}! My name is #{name}. I have 
+  a #{education}, but recently discovered my penchant for coding.
+  Outside of dev life, some things I enjoy include going to the 
+  #{some_interests[0]}, generously consuming #{some_interests[2]}, 
+  and curating #{some_interests[3]}. I have also studied 
+  #{some_interests[1]} in #{locations[1]}, and I found the tapas 
+  and architecture there to be quite lovely."
+
+end</code></pre><br>
+
+				<ul class="links">
+					<!-- <li class="important">Follow Me On:</li><br> -->
+					<li><a href="https://www.linkedin.com/in/edo11"><span class="icon-linkedin bump-up"></span></a></li>
+					<li><a href="https://github.com/Yoonis"><span class="icon-github"></span></a></li>
+					<li><a href="https://twitter.com/Eunice_Tries"><span class="icon-twitter"></span></a></li>
+				</ul>
+
 		</article>
 		
 	</section>
