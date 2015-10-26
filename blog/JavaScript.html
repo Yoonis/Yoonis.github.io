@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JavaScript Loops</title>
+	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
+</head>
+
+<body>
+    
+	<header class="home">
+		<a href="http://yoonis.github.io/">Eunice Do</a>
+	</header>
+
+	<aside class="sidebar">
+		<nav>
+			<ul>
+				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
+				
+				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
+							
+				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
+								
+				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<section>
+		<article>
+			<h1>Looping in JavaScript vs Ruby</h1>
+			<h4>10.26.15</h4>
+			<p>
+				At first I thought that Ruby came with too many built-in iteration methods. Now, having gotten a glimpse of JavaScript, I lament that JavaScript only comes with 2 loops... WHILE and FOR.<br><br>
+			
+				Not to worry though. We can get creative with these 2 loops to build complex functions. First, it's worth noting that there are really only 2 types of loops: 
+					<ul>
+						<li>A) Loops that run until a condition is met.</li>
+						<li>B) Loops that run a specified number of times.</li>
+					</ul>
+			</p>
+			<p>
+				WHILE loops fall into category A. Here is an example in JavaScript: <br><pre><code>var n = 1;
+
+while (n <= 3) {
+  n += 1;
+  console.log("n = " + n);
+}
+// Output:
+// n = 2
+// n = 3
+// n = 4
+</code></pre>
+
+				Here is a WHILE loop in Ruby: <br><pre><code class="Ruby">n = 1
+while n <= 3 do
+  n += 1
+  p "n = #{n}" 
+end
+# Output:
+# n = 2
+# n = 3
+# n = 4
+</code></pre>
+
+				Both WHILE loops continued to execute until the condition (n <= 3) was met by way of an incremental counter on n. As we can see, the concept and the output is the same, just the syntax differs.
+			</p>
+			<p>
+				FOR loops fall into Category B. Here is an example in JavaScript: <br><pre><code>for (var n = 2; n < 5; n++) {
+  console.log("n = " + n);
+}
+// Output:
+// n = 2
+// n = 3
+// n = 4
+</code></pre>
+
+				Here is a FOR loop in Ruby: <br><pre><code class="Ruby">for n in 2..4 do
+  p "n = #{n}" 
+end
+# Output:
+# n = 2
+# n = 3
+# n = 4
+</code></pre>
+
+				As we can see, FOR loops keep track of the incrementing for us in both Ruby and JavaScript. I actually prefer the JavaScript FOR loop because it takes 3 arguments: an incrementor, a conditional, and an action at the end of the loop. This lays out the iteration very clearly. Ruby's FOR takes an incrementor and an expression, but seems less robust. Then again, Ruby has many other options for iterating over a dataset.
+			</p>
+
+			<div class="left-arrow">
+				<h4><a href="http://yoonis.github.io/blog/ruby-classes.html">&#8610; Previous Post</a></h4>
+			</div>
+			
+			<div class="right-arrow">	
+				<h4><a href="#">Next Post &#8611;</a></h4>
+			</div>
+		</article>
+	</section>
+
+	<footer class="footer">
+  		<p>(c) 2015 Eunice Do</p>
+	</footer>
+
+	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>
