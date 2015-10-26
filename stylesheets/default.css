@@ -1,4 +1,4 @@
-html {
+html, body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.1em;
 	color: #668899;
@@ -6,9 +6,16 @@ html {
 	max-width: 100%;
 }
 
+/*@media (max-width: 750px) {}*/
+
+.container {
+  margin: auto;
+  max-width: 800px;
+}
+
 .home {
-	font-size: 2.3em;
-	padding: 20px 10px 30px 20px;
+	font-size: 2.2em;
+	padding: 20px 10px 30px 15px;
 }
 
 .home a {
@@ -28,7 +35,7 @@ html {
 	padding-left: 20px;
 	padding-right: 40px;
 	border-right: 1px dashed #5C5C8A;
-	font-size: 1.15em;
+	font-size: 1.1em;
 }
 
 a:link {
@@ -44,17 +51,17 @@ a:hover {
 	text-decoration: underline;
 }
 
-aside ul {
-	padding-left: 4px;
+nav ul {
+	padding-left: 0px;
 	margin: 10px 0px 5px 0px;
 }
 
-aside li {
+nav li {
 	padding-bottom: 13px;
 	list-style-type: none;
 }
 
-aside li ul {
+nav li ul {
 	margin-top: 0px;
 	padding-left: 25px;
 }

@@ -3,14 +3,16 @@
 
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Eunice Do</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-  	<link rel="stylesheet" type="text/css" href="stylesheets/main-index.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  	<link rel="stylesheet" type="text/css" href="stylesheets/icons.css">
-  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/color-brewer.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main-index.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/icons.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/color-brewer.min.css">
 	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
 </head>
 
 <body>
@@ -19,41 +21,37 @@
 		<a href="http://yoonis.github.io/">Eunice Do</a>
 	</header>
 
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				<li>	
-					<ul>
-						<li><a href="#">Position A</a></li>
-						<!-- <li><a href="#">Position B</a></li> -->
-					</ul>
-				</li>	
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-				<li>	
-					<ul>
-						<li><a href="#">Project A</a></li>
-						<!-- <li><a href="#">Project B</a></li> -->
-					</ul>
-				</li>	
-				
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-				<li>	
-					<ul>
-						<li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
-						<li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
-						<li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
-						<li><a href="http://yoonis.github.io/blog/arrays-hashes.html">Ruby Arrays & Hashes</a></li>
-						<li><a href="http://yoonis.github.io/blog/css-concepts.html">CSS Concepts</a></li>
-						<li><a href="http://yoonis.github.io/blog/">More...</a></li>
-					</ul>
-				</li>	
-				
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+	<nav class="sidebar">
+		<ul>
+			<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
+			<li>	
+				<ul>
+					<li><a href="#">Position A</a></li>
+				</ul>
+			</li>	
+			
+			<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
+			<li>	
+				<ul>
+					<li><a href="#">Project A</a></li>
+				</ul>
+			</li>	
+			
+			<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
+			<li>	
+				<ul>
+					<li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+					<li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+					<li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+					<li><a href="http://yoonis.github.io/blog/arrays-hashes.html">Ruby Arrays & Hashes</a></li>
+					<li><a href="http://yoonis.github.io/blog/css-concepts.html">CSS Concepts</a></li>
+					<li><a href="http://yoonis.github.io/blog/">See More...</a></li>
+				</ul>
+			</li>	
+			
+			<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
+		</ul>
+	</nav>
 	
 	<section>
 
@@ -70,15 +68,15 @@
   
   education = "BBA in International Business"
   
-  some_interests = ["gym", "Spanish", "drip coffee", "music"]
+  interests = ["gym", "Spanish", "drip coffee", "music"]
   
-  print "Hello from #{locations[0]}! My name is #{name}. I have 
-  a #{education}, but recently discovered my penchant for coding.
-  Outside of dev life, some things I enjoy include going to the 
-  #{some_interests[0]}, generously consuming #{some_interests[2]}, 
-  and curating #{some_interests[3]}. I have also studied 
-  #{some_interests[1]} in #{locations[1]}, and I found the tapas 
-  and architecture there to be quite lovely."
+  print "Hello from #{locations[0]}! My name is #{name}. 
+  I have a #{education}, but recently discovered my 
+  penchant for coding. Outside of dev life, some things 
+  I enjoy include going to the #{interests[0]}, 
+  generously consuming #{interests[2]}, and 
+  #{interests[3]}. I studied #{interests[1]} in 
+  #{locations[1]}, and the tapas there are unrivaled."
 
 end</code></pre><br>
 

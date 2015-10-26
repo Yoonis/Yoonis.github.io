@@ -1,0 +1,22 @@
+.kitty-grid{
+  width: 700px;
+  height: 500px;
+  border: 1px solid black;
+  float: left;
+  position: relative;
+}
+
+.kitty {
+  height: 100px;
+  width: 77px;
+  position: absolute;
+  bottom: 0;
+}
+
+.laser-pointer {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: red;
+  position: absolute;
+}
