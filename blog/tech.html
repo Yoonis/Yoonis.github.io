@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Functional Programming</title>
+	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
+</head>
+
+<body>
+    
+	<header class="home">
+		<a href="http://yoonis.github.io/">Eunice Do</a>
+	</header>
+
+	<aside class="sidebar">
+		<nav>
+			<ul>
+				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
+				
+				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
+							
+				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
+								
+				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
+			</ul>
+		</nav>
+	</aside>
+	
+	<section>
+		<article>
+			<h1>Functional Programming</h1>
+			<h4>10.30.15</h4>
+			<p>
+				Before we can dive into Functional Programming, we first need to step back and acknowledge the existence of various programming paradigms. In particular, we'll touch upon two contrasting paradigms: Imperative vs. Declarative.<br><br>
+
+				<span class="important">Imperative</span> programming, also known as algorithmic programming, describes in exacting detail each step that the compiler must take to accomplish your goal. States are mutable (the simplest example of this is the re-assignment of a variable's value).<br><br>
+
+				<span class="important">Declarative</span> programming does not explicitly tell the compiler all the steps needed to reach your end goal. Instead, it "declares" to the compiler what you want to achieve.<br><br>
+				
+				To illustrate the difference between the 2 paradigms, let's take a look at a simple example. Say we want to add 1 to a number:<pre><code>var number = 1;
+
+
+// IMPERATIVE Solution:
+var add = function(num) {
+  sum = num + 1;
+  return sum;
+}
+
+add(number)
+
+// Output:
+// 2
+
+
+// DECLARATIVE Solution:
+var add2 = function(num) {
+  return num + 1;
+}
+
+add2(number)
+
+// Output:
+// 2
+</code></pre><br><br>
+
+				Now that we've got that cleared up...<br>
+				<img src="http://i.giphy.com/QpMBrwCZfb9yE.gif" alt="Lets get down to business" /><br><br><br>
+			
+				<span class="important">Functional programming</span> is a sub-division of declarative programming. Unsurprisingly, functions are treated as "first class citizens" in this paradigm. To sum functional code into one characteristic, it is <span class="important">the absence of side effects.</span> This means that your current function doesn’t rely on outside data, and it also doesn’t change outside data. It is perfectly encapsulated within itself, and can therefore be used anywhere in your program.<br><br>
+
+				<span class="important">Two Tenets of Functional Code:</span>
+				<ol>
+					<li><span class="important">Immutable</span> - Your data should remain unchanged. This means, for example, rather than using destructive methods, you simply create new objects on your return.</li>
+					<li><span class="important">Stateless</span> - Your functions should run every time as if it were the first time, without any regard to outside variables and functions the program may have already executed prior. In other words, your functions should only operate on data that you passed in as arguments without relying on outside variables.</li>
+				</ol>
+
+				<span class="important">Three Functional Habits to Develop:</span> These may appear simple, but since we started learning code with Ruby, we're used to writing imperatively. 
+				<ol>
+					<li>All of your functions must accept at least one argument.</li>
+					<li>All of your functions must return data or another function.</li>
+					<li>No loops!</li>
+				</ol>
+			</p>
+
+			<p>
+			Up until now, we've only grazed the surface of functional programming. I won't be going into specifics, but below you can find an overview of some notable features and benefits of functional programming:<br><br>
+
+				<span class="important">Functional Programming Techniques:</span>
+				<ul>
+					<li>Recursion</li>
+					<li>Pipelining</li>
+					<li>Currying</li>
+					<li>"Higher order functions" - AKA methods that perform actions on arrays in lieu of looping, such as map and reduce.</li>
+				</ul>
+
+				<span class="important">Features of a Functional Language:</span>
+				<ul>
+					<li>Immutable data</li>
+					<li>First class functions</li>
+					<li>Tail call optimisation - <a href="http://cs.stackexchange.com/questions/6230/what-is-tail-recursion/7814#7814">Available as of ECMAScript 6</a></li>
+				</ul>
+
+				<span class="important">Advantageous Properties of Functional Programs:</span>
+				<ul>
+					<li>Parallelization</li>
+					<li>Lazy evaluation</li>
+					<li>Determinism</li>
+				</ul>
+			</p>
+
+			<p>
+				<br><img src="http://i.giphy.com/GSE1BzJG4JVbq.gif" alt="More please"/><br><br>
+
+				Oh, you want to know more? Very well. Here are some additional resources:<br><br>
+
+				<span class="important">Imperative vs. Declarative:</span><br>
+				<ul>
+					<li><a href="https://msdn.microsoft.com/en-us/library/bb669144.aspx">https://msdn.microsoft.com/en-us/library/bb669144.aspx</a></li>
+					<li><a href="http://stackoverflow.com/questions/1784664/what-is-the-difference-between-declarative-and-imperative-programming">http://stackoverflow.com/questions/1784664/what-is-the-difference-between-declarative-and-imperative-programming</a></li>
+				</ul>
+
+				<span class="important">Functional Programming:</span><br>
+				<ul>
+					<li><a href="http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming">http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming</a></li>
+					<li><a href="http://www.smashingmagazine.com/2014/07/dont-be-scared-of-functional-programming/">http://www.smashingmagazine.com/2014/07/dont-be-scared-of-functional-programming/</a></li>
+					<li><a href="http://www.vasinov.com/blog/16-months-of-functional-programming/">http://www.vasinov.com/blog/16-months-of-functional-programming/</a></li>
+				</ul>
+			</p>
+			
+			<div class="left-arrow">
+				<h4><a href="http://yoonis.github.io/blog/JavaScript.html">&#8610; Previous Post</a></h4>
+			</div>
+			
+			<div class="right-arrow">	
+				<h4><a href="#">Next Post &#8611;</a></h4>
+			</div>
+		</article>
+	</section>
+
+	<footer class="footer">
+  		<p>(c) 2015 Eunice Do</p>
+	</footer>
+
+	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>
