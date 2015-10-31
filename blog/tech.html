@@ -41,30 +41,26 @@
 
 				<span class="important">Declarative</span> programming does not explicitly tell the compiler all the steps needed to reach your end goal. Instead, it "declares" to the compiler what you want to achieve.<br><br>
 				
-				To illustrate the difference between the 2 paradigms, let's take a look at a simple example. Say we want to add 1 to a number:<pre><code>var number = 1;
+				To illustrate the difference between the 2 paradigms, let's take a look at a simple example. Say we want to sum all the integers in an array:<pre><code>var integers = [1, 2, 3, 4];
 
 
 // IMPERATIVE Solution:
-var add = function(num) {
-  sum = num + 1;
-  return sum;
+sum = 0;
+for (var i = 0; i < integers.length; i++) {
+  sum += integers[i]
 }
 
-add(number)
-
 // Output:
-// 2
+// 10
 
 
 // DECLARATIVE Solution:
-var add2 = function(num) {
-  return num + 1;
-}
-
-add2(number)
+integers.reduce(function(a, b) {
+  return a + b;
+});
 
 // Output:
-// 2
+// 10
 </code></pre><br><br>
 
 				Now that we've got that cleared up...<br>
