@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>reach THIS</title>
+	<meta charset="UTF-8">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/cheat-sheet.css">
+    <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
+</head>
+
+<body>
+
+	<section class="Ruby">
+		<h1 id="header">Ruby</h1>
+		<h3>Accessing Nested Array Elements</h3>
+		<p><pre><code class="ruby">nested_array = [1, ["reach", "THIS"], 2, 3]
+
+
+puts nested_array[1][1]
+# Output
+# THIS
+
+
+nested_array.each do |first_layer|
+  if first_layer.is_a? Array
+    puts first_layer[1]
+  end
+end
+# Output
+# THIS
+</code></pre></p>
+
+		<h3>Accessing Nested Hash Elements</h3>
+		<p><pre><code class="ruby">nested_hash = {
+               bet: {
+                     "you" => ["c","a","n"],
+                     not:  {
+                            reach: "THIS"
+                           }
+                    }
+              }
+
+
+puts nested_hash[:bet][:not][:reach]
+# Output
+# THIS
+
+
+nested_hash.each do |first_layer, first_value|
+  first_value.each do |second_layer, second_value|
+    second_value.each do |third_layer, third_value|
+      puts third_value
+    end
+  end
+end
+# Output
+# THIS
+</code></pre></p>
+	</section>
+
+	<section class="JS">
+		<h1 id="header">JavaScript</h1>
+		<h3>Accessing Nested Array Elements</h3>
+		<p><pre><code class="javascript">var nested_array = [
+                    "Let's",
+                    "see",
+                    ["you try"], [
+                                  "to reach", [
+                                               "THIS"
+                                              ]
+                                 ]
+                   ];
+
+
+console.log(nested_array[3][1]);
+// Output
+// THIS
+
+</code></pre></p>
+
+		<h3>Accessing Nested Objects in Associative Arrays</h3>
+		<p><pre><code class="javascript">var randomObject = {
+                    pancakes : {"butter" : 2},
+                    sleep : {"never" : {"reach" : "THIS"}}
+                    };
+
+
+console.log(randomObject.sleep.never.reach);
+// Output
+// THIS
+
+
+for (firstElements in randomObject) { 
+  var firstLayer = (randomObject[firstElements]);
+  for (secondElements in firstLayer) {
+	  var secondLayer = (firstLayer[secondElements])
+    for (thirdElements in secondLayer) {
+      var thirdLayer = secondLayer[thirdElements]
+      console.log(thirdLayer);
+    }
+  }
+}
+// Output
+// THIS
+
+</code></pre></p>
+	</section>
+
+	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+
+</html>

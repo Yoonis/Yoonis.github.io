@@ -1,0 +1,33 @@
+.Ruby {
+  float: left;
+  min-width: 47%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+
+.JS {
+  float: left;
+  min-width: 47%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+
+#header {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 2em;
+}
+
+h3 {
+  text-align: center;
+}
+
+body {
+  color: black;
+}
+
+html {
+  min-height: 100%;
+  background: radial-gradient(transparent, #EBF5FF);
+  background-size: cover;
+}
