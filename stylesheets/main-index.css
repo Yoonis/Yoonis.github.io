@@ -16,7 +16,7 @@
 	float: left;
 	padding-left: 10px;
 	max-width: 50%;	
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 
 .text p {
@@ -24,13 +24,13 @@
 }
 
 .links a {
-	padding: .5em 1em .5em 0em;
+	padding: .5rem 1rem .5rem 0rem;
 }
 
 .links li {
 	list-style-type: none;
 	display: inline-block;
-	margin-bottom: 1em;
+	margin-bottom: 1rem;
 }
 
 article ul {

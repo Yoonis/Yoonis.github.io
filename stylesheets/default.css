@@ -1,12 +1,10 @@
 html, body {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.1em;
+	font-family: 'Raleway', Helvetica;
+	font-size: 1.1rem;
 	color: #668899;
 	box-sizing: border-box;
 	max-width: 100%;
 }
-
-/*@media (max-width: 750px) {}*/
 
 .container {
   margin: auto;
@@ -14,7 +12,7 @@ html, body {
 }
 
 .home {
-	font-size: 2.2em;
+	font-size: 2.2rem;
 	padding: 20px 10px 30px 15px;
 }
 
@@ -35,7 +33,7 @@ html, body {
 	padding-left: 20px;
 	padding-right: 40px;
 	border-right: 1px dashed #5C5C8A;
-	font-size: 1.1em;
+	font-size: 1.1rem;
 }
 
 a:link {
@@ -74,5 +72,5 @@ nav li ul {
 .footer {
 	clear: both;
 	margin-left: 45%;
-	padding-top: 1em;
+	padding-top: 1rem;
 }
