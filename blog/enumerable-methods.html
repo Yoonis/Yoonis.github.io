@@ -14,92 +14,120 @@
     
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   	
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
-  	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
-  	<script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
 </head>
 
 <body>
-    
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-							
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-								
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 	
-	<section>
-		<article>
-			<h1>Enumerable of the Day: .cycle</h1>
-			<h4>10.11.15</h4>
-      <p>
-        <span class="important">Input:</span> An object of the Collection Class, such as an array or hash.<br><br>
+	<div class="column medium-2"><pre> </pre></div>
+  <section class="column medium-8">
+		<h1>Enumerable of the Day: .cycle</h1>
+		<h4>10.11.15</h4>
+    <p>
+      <span class="important">Input:</span> An object of the Collection Class, such as an array or hash.<br><br>
 
-        <span class="important">Takes Arguments?</span> Yes, an optional integer and a block.<br><br>
+      <span class="important">Takes Arguments?</span> Yes, an optional integer and a block.<br><br>
 
-        <span class="important">Expectation:</span> This enumerable should call on the block while iterating through each element in your collection as many times as you set it to.<br><br>
+      <span class="important">Expectation:</span> This enumerable should call on the block while iterating through each element in your collection as many times as you set it to.<br><br>
 
-        <span class="important">Output:</span> It depends on what is given. Let's follow the journey of this delicious "cheeses" array as it gets transformed under different use cases: 
-        <pre><code>cheeses = ["mozzarella", "havarti", "gouda"]</code></pre>
-      </p>
-      <p>
-        <ul>
-          <li><span class="important">Best Use Case:</span> When a block and an integer are both given, all collection elements are iterated while the block is called upon. Once all loops are successfully completed, the final return value is actually nil. <pre><code>cheeses.cycle(2) {|x| puts x}
+      <span class="important">Output:</span> It depends on what is given. Let's follow the journey of this delicious "cheeses" array as it gets transformed under different use cases: 
+      <pre><code>cheeses = ["mozzarella", "havarti", "gouda"]</code></pre>
+    </p>
+    <p>
+      <ul>
+        <li><span class="important">Best Use Case:</span> When a block and an integer are both given, all collection elements are iterated while the block is called upon. Once all loops are successfully completed, the final return value is actually nil. <pre><code>cheeses.cycle(2) {|x| puts x}
 # => mozzarella, havarti, gouda, mozzarella, havarti, gouda
 # => nil</code></pre></li>
-
-          <li>Note that it is possible to interrupt the looping by including a break if statement. The block call will return anything up until the break, and the final return value is also nil.<pre><code>cheeses.cycle(2) do |x| 
+        <br>
+        <li>Note that it is possible to interrupt the looping by including a break if statement. The block call will return anything up until the break, and the final return value is also nil.<pre><code>cheeses.cycle(2) do |x| 
   puts x 
   break if x == "havarti"
 end
 # => mozzarella, havarti
 # => nil
 </code></pre></li>
-
-          <li>When no block is given, output is an Enumerator of self. <pre><code>cheeses.cycle
+        <br>
+        <li>When no block is given, output is an Enumerator of self. <pre><code>cheeses.cycle
 # => Enumerator ["mozzarella", "havarti", "gouda"]</code></pre></li>
-          
-          <li>When a block is given and an integer is not given OR nil is given, all elements of the collection are repeated infinitely. <pre><code>cheeses.cycle {|x| puts x}
+        <br>
+        <li>When a block is given and an integer is not given OR nil is given, all elements of the collection are repeated infinitely. <pre><code>cheeses.cycle {|x| puts x}
 # OR
 cheeses.cycle(nil) {|x| puts x}
 # => mozzarella, havarti, gouda, mozzarella, havarti, gouda, mozzarella, havarti ... till the end of time.
 </code></pre></li>         
-
-          <li>When a negative integer is given, or the collection is empty, the enumerable will do nothing. <pre><code>cheeses.cycle(-3) {|x| puts x}
+        <br>
+        <li>When a negative integer is given, or the collection is empty, the enumerable will do nothing. <pre><code>cheeses.cycle(-3) {|x| puts x}
 # OR
 cheeses = []
 cheeses.cycle(2) {|x| puts x}
 # =>
 </code></pre></li>
-        </ul>
-        One last thing to note is that .cycle saves elements in an internal array. Any changes to the collection after the first pass will have no effect while .cycle carries out the remaining iterations.
-			</p>
-			
-			<div class="left-arrow">
-				<h4><a href="http://yoonis.github.io/blog/diversity.html">&#8610; Previous Post</a></h4>
-			</div>
-			
-			<div class="right-arrow">	
-				<h4><a href="http://yoonis.github.io/blog/ruby-classes.html">Next Post &#8611;</a></h4>
-			</div>
-		</article>
+      </ul>
+      One last thing to note is that .cycle saves elements in an internal array. Any changes to the collection after the first pass will have no effect while .cycle carries out the remaining iterations.
+		</p>
+		
+		<div class="left-arrow">
+			<h4><a href="http://yoonis.github.io/blog/diversity.html">&#8610; Previous Post</a></h4>
+		</div>
+		
+		<div class="right-arrow">	
+			<h4><a href="http://yoonis.github.io/blog/ruby-classes.html">Next Post &#8611;</a></h4>
+		</div>
 	</section>
+  <div class="column medium-2"><pre> </pre></div>
 
 	<footer class="footer">
   		<p>(c) 2015 Eunice Do</p>
 	</footer>
 
+  <script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
 </body>
-
 </html>

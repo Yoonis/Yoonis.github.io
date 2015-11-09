@@ -14,63 +14,91 @@
     
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   	
-  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
 		<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
-    
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-							
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-								
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 	
-	<section>
-		<article>
-			<h1>Women in Tech</h1>
-			<h4>10.4.15</h4>
-			<p>
-				There have been genuine, public pushes in recent years to encourage diversity in STEM subjects (Science, Technology, Engineering, Mathematics). However, it's clear that as a whole, the mindset of our current working generations can indeed be expanded. I will let <a href="http://infobeautiful4.s3.amazonaws.com/2015/05/1276_Diversity-In-Tech.png" Alt="2014 tech employee breakdown">this breakdown of employees in the tech industry in 2014</a> speak for itself.
-			</p>
-			<p>
-				There is <a href="http://fortune.com/2015/08/08/jane-lansing-women-in-tech/">an excellent piece of commentary by Jane Lansing</a> that sums up the silent pains experienced by female tech employees in particular. To quote Lansing, 
-				<blockquote cite="http://fortune.com/2015/08/08/jane-lansing-women-in-tech/">"It still pains me to remember the time my project manager insisted that a male colleague review the code I’d written for a new project – even though the colleague happened to be notoriously incompetent. Or the times customers couldn’t look me in the eye or even speak to me directly, but would instead ask their questions of my male colleagues – even when it was entirely obvious that the one with the relevant expertise was me."</blockquote>
+	<div class="column medium-2"><pre> </pre></div>
+	<section class="column medium-8">
+		<h1>Women in Tech</h1>
+		<h4>10.4.15</h4>
+		<p>
+			There have been genuine, public pushes in recent years to encourage diversity in STEM subjects (Science, Technology, Engineering, Mathematics). However, it's clear that as a whole, the mindset of our current working generations can indeed be expanded. I will let <a href="http://infobeautiful4.s3.amazonaws.com/2015/05/1276_Diversity-In-Tech.png" Alt="2014 tech employee breakdown">this breakdown of employees in the tech industry in 2014</a> speak for itself.
+		</p>
+		<p>
+			There is <a href="http://fortune.com/2015/08/08/jane-lansing-women-in-tech/">an excellent piece of commentary by Jane Lansing</a> that sums up the silent pains experienced by female tech employees in particular. To quote Lansing, 
+			<blockquote cite="http://fortune.com/2015/08/08/jane-lansing-women-in-tech/">"It still pains me to remember the time my project manager insisted that a male colleague review the code I’d written for a new project – even though the colleague happened to be notoriously incompetent. Or the times customers couldn’t look me in the eye or even speak to me directly, but would instead ask their questions of my male colleagues – even when it was entirely obvious that the one with the relevant expertise was me."</blockquote>
 
-				<a href="http://www.latimes.com/business/la-fi-women-tech-20150222-story.html">A recent article by the LA Times</a> highlights the less often talked about issue of qualified, experienced women <span class="important">leaving</span> the tech industry after enduring the undercurrents of years of patriarchal patronizing in the workplace.<br><br>
+			<a href="http://www.latimes.com/business/la-fi-women-tech-20150222-story.html">A recent article by the LA Times</a> highlights the less often talked about issue of qualified, experienced women <span class="important">leaving</span> the tech industry after enduring the undercurrents of years of patriarchal patronizing in the workplace.<br><br>
 
-				Right along the same vein, I came across <a href="http://juliepagano.tumblr.com/post/46206589124/my-experiences-in-tech-death-by-1000-paper-cuts">a moving blog post by a female software engineer</a> who describes her career experiences as "Death by 1,000 paper cuts."
-			</p>
-			<p>
-				To be frank, this post didn't have to zero in on the tech industry. There is a <span class="important">very real need for kindness and progressive thinking</span> in the world, and I'm truly disappointed to realize how much improving still needs to be done today.
-			</p>
-			<div class="left-arrow">
-				<h4><a href="http://yoonis.github.io/blog/arrays-hashes.html">&#8610; Previous Post</a></h4>
-			</div>
-			
-			<div class="right-arrow">	
-				<h4><a href="http://yoonis.github.io/blog/enumerable-methods.html">Next Post &#8611;</a></h4>
-			</div>
-		</article>
+			Right along the same vein, I came across <a href="http://juliepagano.tumblr.com/post/46206589124/my-experiences-in-tech-death-by-1000-paper-cuts">a moving blog post by a female software engineer</a> who describes her career experiences as "Death by 1,000 paper cuts."
+		</p>
+		<p>
+			Thank you for sticking with me till the end of this post. In honesty, I didn't have to zero in on the tech industry here. There is a <span class="important">very real need for kindness and progressive thinking</span> in the world, and it's disheartening to realize how much improving still needs to be done today.
+		</p>
+		<div class="left-arrow">
+			<h4><a href="http://yoonis.github.io/blog/arrays-hashes.html">&#8610; Previous Post</a></h4>
+		</div>
+		
+		<div class="right-arrow">	
+			<h4><a href="http://yoonis.github.io/blog/enumerable-methods.html">Next Post &#8611;</a></h4>
+		</div>
 	</section>
+	<div class="column medium-2"><pre> </pre></div>
 
 	<footer class="footer">
   		<p>(c) 2015 Eunice Do</p>
 	</footer>
 
-</body>
+	<!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
 
+</body>
 </html>

@@ -29,8 +29,7 @@
 </head>
 
 <body>
-  <div id="include-header"></div>
-  <div class="contain-to-grid fixed">
+  <div class="contain-to-grid sticky fixed">
     <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
@@ -91,8 +90,7 @@
   generously consuming #{interests[2]}, and 
   #{interests[3]}. I studied #{interests[1]} in 
   #{locations[1]}, and the tapas there are unrivaled."
-end
-          </code>
+end 		  </code>
         </pre>
       </div>
       <div class="columns medium-3">
@@ -110,9 +108,6 @@ end
       <p>(c) 2015 Eunice Do</p>
   </footer>
 
-  <!-- Handlebars JS -->
-  <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
-
   <!-- HighlightJS JS -->
   <script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
@@ -120,13 +115,9 @@ end
   <!-- Foundation Zurb -->
   <script type="text/javascript" src="bower_components/foundation/js/vendor/jquery.js"></script>
   <script type="text/javascript" src="bower_components/foundation/js/foundation.min.js"></script>
-  <script>
-    $(document).foundation('reflow'); 
-    $(document).ready(function(){
-      $("#include-header").load("templates/test_handlebars.html"); 
-    });
+  <script> 
+    $(document).foundation(''); 
   </script>
 
 </body>
-
 </html>

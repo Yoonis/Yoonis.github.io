@@ -15,47 +15,72 @@
   </head>
 
   <body>
-  
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-				<li>	
-					<ul>
-						<li><a href="#">Project A</a></li>
-						<li><a href="#">Project B</a></li>
-					</ul>
-				</li>	
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-				
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
-
-	<section>
-		<h2>Kitty Game</h2>
-		<p>Don't let the kitty catch your laser pointer!</p>
-    <div>Game Status: <span class="status"></span></div><br>
-    <div class="kitty-grid">
-      <img class="kitty" src="../imgs/pusheen.png" alt="Kitty"/>
-      <div class="laser-pointer"></div>
+    <div class="contain-to-grid sticky fixed">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#"><span>Menu</span></a>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="left">
+            <li class="has-dropdown">
+              <a href="#">Work Experience</a>
+              <ul class="dropdown">
+                <li><a href="#">Job 1</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">Portfolio</a>
+              <ul class="dropdown">
+                <li><a href="#">Project A</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="http://yoonis.github.io/blog/">Blog</a>
+              <ul class="dropdown">
+                <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+                <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+                <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+                <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+                <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+                <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+              </ul>
+            </li>
+            <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+          </ul>
+        </section>
+      </nav>
     </div>
 
-	</section>
-	
-	<footer class="footer">
-  		<p>(c) 2015 Eunice Do</p>
-	</footer>
+    <div class="column medium-12">
+    	<section>
+    		<h2>Kitty Game</h2>
+    		<p>Don't let the kitty catch your laser pointer!</p>
+        <div>Game Status: <span class="status"></span></div><br>
+        <div class="kitty-grid">
+          <img class="kitty" src="../imgs/pusheen.png" alt="Kitty"/>
+          <div class="laser-pointer"></div>
+        </div>
+    	</section>
+    </div>
+  	
+  	<footer class="footer">
+    		<p>(c) 2015 Eunice Do</p>
+  	</footer>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/kitty-game.js"></script>
+
+    <!-- Foundation Zurb -->
+    <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+    <script> 
+      $(document).foundation(''); 
+    </script>
 
   </body>
 </html>

@@ -15,43 +15,69 @@
   </head>
 
   <body>
-  
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
+    <div class="contain-to-grid sticky fixed">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#"><span>Menu</span></a>
+          </li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="left">
+            <li class="has-dropdown">
+              <a href="#">Work Experience</a>
+              <ul class="dropdown">
+                <li><a href="#">Job 1</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="#">Portfolio</a>
+              <ul class="dropdown">
+                <li><a href="#">Project A</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="http://yoonis.github.io/blog/">Blog</a>
+              <ul class="dropdown">
+                <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+                <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+                <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+                <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+                <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+                <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+              </ul>
+            </li>
+            <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
 
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-				<li>	
-					<ul>
-						<li><a href="#">Project A</a></li>
-						<li><a href="#">Project B</a></li>
-					</ul>
-				</li>	
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-				
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+    <div class="column medium-2"><pre> </pre></div>
+    <div class="column medium-8">
+    	<section>
+    		<h2>Project A</h2>
+    		<p>Expo here</p>
+    	</section>
+    	<section>
+    		<h2>Project B</h2>
+    		<p>Expo here</p>
+    	</section>
+    </div>
+    <div class="column medium-2"><pre> </pre></div>
 
-	<section>
-		<h2>Project A</h2>
-		<p>Expo here</p>
-	</section>
+  	<footer class="footer">
+    		<p>(c) 2015 Eunice Do</p>
+  	</footer>
 
-	<section>
-		<h2>Project B</h2>
-		<p>Expo here</p>
-	</section>
-	
-	<footer class="footer">
-  		<p>(c) 2015 Eunice Do</p>
-	</footer>
+    <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+    <script> 
+      $(document).foundation(''); 
+    </script>
 
   </body>
 </html>

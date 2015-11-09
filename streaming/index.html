@@ -16,37 +16,61 @@
 </head>
 
 <body>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-					
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-				
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-				
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
-
-	<section>
-
-		<article class="main">
-			<h2>What's Streaming?</h2>
-			<h4>Released Weekly</h4>
-			<p>From coding to working out to commuting, everyone's got a soundtrack to make life a little more exciting! Here are the tunes streaming in my headphones this week:</p>
-
-			<p><iframe src="https://embed.spotify.com/?uri=spotify:user:spotifydiscover:playlist:70xAqgwWVzghP73SDkKqj6" width="300" height="380" seamless></iframe></p>
-		</article>
-		
+  <div class="column medium-4"><pre> </pre></div>
+	<section class="main column medium-4">
+		<h2>What's Streaming?</h2>
+		<h4>Released Weekly</h4>
+		<p>From coding to working out to commuting, everyone's got a soundtrack to make life a little more exciting! Here are the tunes streaming in my headphones this week:</p>
+		<p><iframe src="https://embed.spotify.com/?uri=spotify:user:spotifydiscover:playlist:70xAqgwWVzghP73SDkKqj6" width="300" height="380" seamless></iframe></p>
 	</section>
+  <div class="column medium-4"><pre> </pre></div>
 
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
 </body>
-
 </html>

@@ -1,7 +1,7 @@
 html, body {
 	font-family: 'Raleway', Helvetica;
-	font-size: 1.1rem;
-	color: #668899;
+	font-size: 1.05rem;
+	color: #3d3d5c;
 	box-sizing: border-box;
 }
 
@@ -11,7 +11,7 @@ a:link {
 }
 
 a:visited {
-	color: black;
+	color: #735c8a;
 }
 
 a:hover {

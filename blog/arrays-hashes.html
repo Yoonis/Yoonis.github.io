@@ -14,116 +14,141 @@
     
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   	
-  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
 		<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
-    
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-							
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 	
-	<section>
-		<article>
-			<h1>Ruby Arrays & Hashes</h1>
-			<h4>10.2.15</h4>
+	<div class="column medium-2"><pre> </pre></div>
+	<section class="column medium-8">
+		<h1>Ruby Arrays & Hashes</h1>
+		<h4>10.2.15</h4>
+		
+		<h3>Arrays</h3>
+		<p>
+			Put simply, arrays are ordered collections of objects. Each collection can hold multiple elements of any data type, including other arrays. Each element can be referred to by an index. <em>An important thing to keep in mind is that arrays start at the zeroth index.</em> The last item in an array can be referred to by the -1 index (accordingly, the penultimate array item would be indexed at -2).
 			
-			<h3>Arrays</h3>
-			<p>
-				Put simply, arrays are ordered collections of objects. Each collection can hold multiple elements of any data type, including other arrays. Each element can be referred to by an index. <em>An important thing to keep in mind is that arrays start at the zeroth index.</em> The last item in an array can be referred to by the -1 index (accordingly, the penultimate array item would be indexed at -2).
-				
-				There is more than one way to create an array. For example...
-			</p>
-			<p>
-				Creation with square brackets:<br>
-				
-				<pre><code class="ruby">cheese = ["brie", "gruyere", "swiss"]
-	#cheese[0] cheese[1] cheese[2]
-	#The respective index positions.</code></pre>
-
-				Creation with the Array.new method, which can also take arguments and a block (argument and block not depicted here):<br>
-				
-				<pre><code>cheese = Array.new
+			There is more than one way to create an array. For example...
+		</p>
+		<p>
+			Creation with square brackets:
+			<pre><code class="ruby">cheese = ["brie", "gruyere", "swiss"]
+#cheese[0] cheese[1] cheese[2]
+#The respective index positions.</code></pre>
+			<br>
+			Creation with the Array.new method, which can also take arguments and a block (argument and block not depicted here):
+			<pre><code>cheese = Array.new
 cheese.push "brie"
 cheese.push "gruyere"
 cheese.push "swiss"</code></pre>
-			
-			 	Both arrays we created above will give you the same output:<br>
-
-			 	<pre><code>puts cheese
+			<br>
+		 	Both arrays we created above will give you the same output:
+		 	<pre><code>puts cheese
 => brie
-   gruyere
-   swiss</code></pre>
-
-			 	***To learn about all the cool methods you can apply to arrays, check out the <a href="http://ruby-doc.org/core-2.2.0/Array.html">Ruby documents here</a>.***
-
-			
-			<h3>Hashes</h3>
-			<p>
-				A hash can be thought of as a database or a collection that contains key value pairings. Keys are unique, and each key is to be assigned a value. They're also known as associative arrays due to their similarities to arrays, but they differ in that arrays index content by integers, while hashes allow content to be indexed using any object type. Lets take a look at a couple ways we can create a hash...
-			</p>
-			<p>
-				Creation with curly braces:<br>
-
-				<pre><code>#Option 1 formatting:
+ gruyere
+ swiss</code></pre>
+			<br>
+		 	To learn about all the cool methods you can apply to arrays, check out the <a href="http://ruby-doc.org/core-2.2.0/Array.html">Ruby documents here</a>.
+		<br>
+		<br>
+		<h3>Hashes</h3>
+		<p>
+			A hash can be thought of as a database or a collection that contains key value pairings. Keys are unique, and each key is to be assigned a value. They're also known as associative arrays due to their similarities to arrays, but they differ in that arrays index content by integers, while hashes allow content to be indexed using any object type. Lets take a look at a couple ways we can create a hash...
+		</p>
+		<p>
+			Creation with curly braces:
+			<pre><code>#Option 1 formatting:
 cheese = {"brie": "mildly tangy and fruity", "gruyere": "creamy and sweet", "swiss": "slightly nutty and mild"}
 
 #Option 2 formatting:
 cheese = {"brie" => "mildly tangy and fruity", "gruyere" => "creamy and sweet", "swiss" => "slightly nutty and mild"}</code></pre>
-
-				Creation with the Hash.new method:<br>
-
-				<pre><code>cheese = Hash.new
+			<br>
+			Creation with the Hash.new method:
+			<pre><code>cheese = Hash.new
 cheese["brie"] = "mildly tangy and fruity"
 cheese["gruyere"] = "creamy and sweet"
 cheese["swiss"] = "slightly nutty and mild"</code></pre>
-
-				Both methods will serve up the same output:<br>
-
-				<pre><code>puts cheese
+			<br>
+			Both methods will serve up the same output:
+			<pre><code>puts cheese
 => {"brie"=>"mildly tangy and fruity", "gruyere"=>"creamy and sweet", "swiss"=>"slightly nutty and mild"}</code></pre>
-
-				Each key you named in effect became the "hash index" that you can call to access your value:<br>
-
-				<pre><code>cheese["brie"]
+			<br>
+			Each key you named in effect became the "hash index" that you can call to access your value:
+			<pre><code>cheese["brie"]
 => "mildly tangy and fruity"</code></pre>
-
-				Rather than calling your value one key at a time, there is a nifty hash method that will return all your values in an array:<br>
-
-				<pre><code>cheese.values
+			<br>
+			Rather than calling your value one key at a time, there is a nifty hash method that will return all your values in an array:
+			<pre><code>cheese.values
 => ["mildly tangy and fruity", "creamy and sweet", "slightly nutty and mild"]</code></pre>
-
-				***There are many other hash methods you can explore in the <a href="http://ruby-doc.org/core-1.9.3/Hash.html">Ruby documents here</a> at your leisure.***
-
-			<div class="left-arrow">
-				<h4><a href="http://yoonis.github.io/blog/css-concepts.html">&#8610; Previous Post</a></h4>
-			</div>
-			
-			<div class="right-arrow">	
-				<h4><a href="http://yoonis.github.io/blog/diversity.html">Next Post &#8611;</a></h4>
-			</div>
-		</article>
+			<br>
+			There are many other hash methods you can explore in the <a href="http://ruby-doc.org/core-1.9.3/Hash.html">Ruby documents</a> at your leisure.
+			<br>
+			<br>
+		<div class="left-arrow">
+			<h4><a href="http://yoonis.github.io/blog/css-concepts.html">&#8610; Previous Post</a></h4>
+		</div>
+		
+		<div class="right-arrow">	
+			<h4><a href="http://yoonis.github.io/blog/diversity.html">Next Post &#8611;</a></h4>
+		</div>
 	</section>
+	<div class="column medium-2"><pre> </pre></div>
 
 	<footer class="footer">
   		<p>(c) 2015 Eunice Do</p>
 	</footer>
+
+	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
 
 </body>
 

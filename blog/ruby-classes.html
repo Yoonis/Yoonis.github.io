@@ -14,42 +14,62 @@
     
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   	
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
-  	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
-  	<script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
 </head>
 
 <body>
-    
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-							
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-								
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 	
-	<section>
-		<article>
-			<h1>Ruby Classes</h1>
-			<h4>10.17.15</h4>
-			<p>
-				This week, the concept that wins the most points for frustration-building, confusion-inducing, and error-creating is the Ruby class... Class.<br><br>
+	<div class="column medium-2"><pre> </pre></div>
+  <section class="column medium-8">
+		<h1>Ruby Classes</h1>
+		<h4>10.17.15</h4>
+		<p>
+			This week, the concept that wins the most points for frustration-building, confusion-inducing, and error-creating is the Ruby class... Class.<br><br>
 
-        Take a look at an example class in action below:
-			</p>
+      Take a look at an example class in action below:
+		</p>
 
-			<p><pre><code>class MusicPlayer
+		<p><pre><code>class MusicPlayer
   def initialize(songs)
     @playlist = songs
     return raise ArgumentError.new("Number of songs should be greater than 0.") if @playlist.keys.count < 1
@@ -80,38 +100,47 @@ new_session.play
 # By the way, what an excellent taste in music!
 
 </code></pre>
-      </p>
-
-      <p>
-        <span class="important">Let's analyze what's happening from the top down.</span><br><br>
-        1. We are starting with a class titled MusicPlayer. Every object inside this class should in theory represent an attribute of a music player as we know it. Every method inside this class should represent a functionality of a music player when we interact with one.<br><br>
-        2. To initialize this class, we define initialize, which is a method that takes one argument called "songs". (What good is a music player if it has no songs to play?)<br><br>
-        3. In the next line, I created an <span class="important">instance variable</span> called @playlist and stored the songs input in it. This functions just like any other variable, except that it has an expanded scope. I'm able to use @playlist in any method inside this class, making information sharing a lot easier.<br><br>
-        4. Next we have an optional argument error. In this instance, it is triggered if the user provides an empty songs input.<br><br>
-        5. (Disclaimer: Yes, this is an extremely humble version of playing through a playlist.)<br>
-        In the second definition, we see an <span class="important">instance method</span> called play. Instance methods can be called on new instances of a class. This is opposed to <span class="important">class methods</span>, which are methods that can only be called on the class object itself. In our example here, the instance method "play" takes the information from our instance variable @playlist, loops through each song title and artist name, then outputs them out one by one with a 1 second delay between each puts that is meant to represent the song playing.<br>(Our music player then momentarily gains sentience in order to tell us how great our music is.)<br><br>
-        6. Beneath the class definition, we have our "driver code" or <span class="important">test code</span>. In sum, this is where we provide the class initialization input, create a new instance of the class, and call our instance methods on the new class instance.<br><br>
-        7. First, I provided the "songs" hash input. I chose the hash collection over an array collection object in order to easily store both song titles and artist names.<br><br>
-        8. Second, I created a "new_session" variable that stores our new MusicPlayer instance.<br>
-        A new class instance can always be created like so: <pre><code>class_object.new(argument)</code></pre>
-        9. Third, I called our instance method "play" on our newly minted class instance new_session, and this generated the output that we see in the output section. That's all!<br><br>
-        
-        If we had created a class method "play" like so: <pre><code class="ruby">def self.play</code></pre> then we would have had to call it on our class object directly like so: <pre><code class="ruby">MusicPlayer.play</code></pre>
-      </p>
-			
-			<div class="left-arrow">
-				<h4><a href="http://yoonis.github.io/blog/enumerable-methods.html">&#8610; Previous Post</a></h4>
-			</div>
-			
-			<div class="right-arrow">	
-				<h4><a href="http://yoonis.github.io/blog/JavaScript.html">Next Post &#8611;</a></h4>
-			</div>
-		</article>
+    </p>
+    <p>
+      <span class="important">Let's analyze what's happening from the top down.</span><br><br>
+      1. We are starting with a class titled MusicPlayer. Every object inside this class should in theory represent an attribute of a music player as we know it. Every method inside this class should represent a functionality of a music player when we interact with one.<br><br>
+      2. To initialize this class, we define initialize, which is a method that takes one argument called "songs". (What good is a music player if it has no songs to play?)<br><br>
+      3. In the next line, I created an <span class="important">instance variable</span> called @playlist and stored the songs input in it. This functions just like any other variable, except that it has an expanded scope. I'm able to use @playlist in any method inside this class, making information sharing a lot easier.<br><br>
+      4. Next we have an optional argument error. In this instance, it is triggered if the user provides an empty songs input.<br><br>
+      5. (Disclaimer: Yes, this is an extremely humble version of playing through a playlist.)<br>
+      In the second definition, we see an <span class="important">instance method</span> called play. Instance methods can be called on new instances of a class. This is opposed to <span class="important">class methods</span>, which are methods that can only be called on the class object itself. In our example here, the instance method "play" takes the information from our instance variable @playlist, loops through each song title and artist name, then outputs them out one by one with a 1 second delay between each puts that is meant to represent the song playing.<br>(Our music player then momentarily gains sentience in order to tell us how great our music is.)<br><br>
+      6. Beneath the class definition, we have our "driver code" or <span class="important">test code</span>. In sum, this is where we provide the class initialization input, create a new instance of the class, and call our instance methods on the new class instance.<br><br>
+      7. First, I provided the "songs" hash input. I chose the hash collection over an array collection object in order to easily store both song titles and artist names.<br><br>
+      8. Second, I created a "new_session" variable that stores our new MusicPlayer instance.<br>
+      A new class instance can always be created like so: <pre><code>class_object.new(argument)</code></pre>
+      9. Third, I called our instance method "play" on our newly minted class instance new_session, and this generated the output that we see in the output section. That's all!<br><br>
+      
+      If we had created a class method "play" like so: <pre><code class="ruby">def self.play</code></pre><br> then we would have had to call it on our class object directly like so: <pre><code class="ruby">MusicPlayer.play</code></pre>
+    </p>
+		
+		<div class="left-arrow">
+			<h4><a href="http://yoonis.github.io/blog/enumerable-methods.html">&#8610; Previous Post</a></h4>
+		</div>
+		
+		<div class="right-arrow">	
+			<h4><a href="http://yoonis.github.io/blog/JavaScript.html">Next Post &#8611;</a></h4>
+		</div>
 	</section>
+  <div class="column medium-2"><pre> </pre></div>
 
 	<footer class="footer">
   		<p>(c) 2015 Eunice Do</p>
 	</footer>
+
+  <script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
 
 </body>
 </html>

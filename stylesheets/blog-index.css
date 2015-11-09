@@ -1,19 +1,14 @@
 body {
 	background-image: url("../imgs/quill.png");
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: right;
 	background-size: 60%;
 }
 
-.posts {
-	float: left;
-	font-size: 1.6em;
-	min-height: 600px;
-	min-width: 480px;
-}
-
 .posts li {
-	padding-bottom: 1em;
+	font-size: 1.5rem;
+	padding-bottom: .3rem;
+	padding-top: .7rem;
 }
 
 .posts ul {

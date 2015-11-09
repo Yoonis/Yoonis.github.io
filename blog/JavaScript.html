@@ -16,99 +16,121 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
     <!-- Highlight JS -->
-  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/rainbow.min.css">
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
 </head>
 
 <body>
-    
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<aside class="sidebar">
-		<nav>
-			<ul>
-				<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-				
-				<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-							
-				<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-								
-				<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-			</ul>
-		</nav>
-	</aside>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 	
-	<section>
-		<article>
-			<h1>Looping in JavaScript vs Ruby</h1>
-			<h4>10.26.15</h4>
-			<p>
-				At first I thought that Ruby came with too many built-in iteration methods. Now, having gotten a glimpse of JavaScript, I lament that JavaScript only comes with 2 loops... WHILE and FOR.<br><br>
-			
-				Not to worry though. We can get creative with these 2 loops to build complex functions. First, it's worth noting that there are really only 2 types of loops: 
-					<ul>
-						<li>A) Loops that run until a condition is met.</li>
-						<li>B) Loops that run a specified number of times.</li>
-					</ul>
-			</p>
-			<p>
-				WHILE loops fall into category A. Here is an example in JavaScript: <br><pre><code>var n = 1;
+  <div class="column medium-2"><pre> </pre></div>
+	<section class="column medium-8">
+		<h1>Looping in JavaScript vs Ruby</h1>
+		<h4>10.26.15</h4>
+		<p>
+			At first I thought that Ruby came with too many built-in iteration methods. Now, having gotten a glimpse of JavaScript, I lament that JavaScript only comes with 2 loops... WHILE and FOR.<br><br>
+		
+			Not to worry though. We can get creative with these 2 loops to build complex functions. First, it's worth noting that there are really only 2 types of loops: 
+				<ul>
+					<li>A) Loops that run until a condition is met.</li>
+					<li>B) Loops that run a specified number of times.</li>
+				</ul>
+		</p>
+		<p>
+			WHILE loops fall into category A. Here is an example in JavaScript: <br><pre><code>var n = 1;
 
 while (n <= 3) {
-  n += 1;
-  console.log("n = " + n);
+n += 1;
+console.log("n = " + n);
 }
 // Output:
 // n = 2
 // n = 3
 // n = 4
 </code></pre>
-
-				Here is a WHILE loop in Ruby: <br><pre><code class="Ruby">n = 1
+      <br>
+			Here is a WHILE loop in Ruby: <br><pre><code class="Ruby">n = 1
 while n <= 3 do
-  n += 1
-  p "n = #{n}" 
+n += 1
+p "n = #{n}" 
 end
 # Output:
 # n = 2
 # n = 3
 # n = 4
 </code></pre>
-
-				Both WHILE loops continued to execute until the condition (n <= 3) was met by way of an incremental counter on n. As we can see, the concept and the output is the same, just the syntax differs.
-			</p>
-			<p>
-				FOR loops fall into Category B. Here is an example in JavaScript: <br><pre><code>for (var n = 2; n < 5; n++) {
-  console.log("n = " + n);
+      <br>
+			Both WHILE loops continued to execute until the condition (n <= 3) was met by way of an incremental counter on n. As we can see, the concept and the output is the same, just the syntax differs.
+		</p>
+		<p>
+			FOR loops fall into Category B. Here is an example in JavaScript: <br><pre><code>for (var n = 2; n < 5; n++) {
+console.log("n = " + n);
 }
 // Output:
 // n = 2
 // n = 3
 // n = 4
 </code></pre>
-
-				Here is a FOR loop in Ruby: <br><pre><code class="Ruby">for n in 2..4 do
-  p "n = #{n}" 
+      <br>
+			Here is a FOR loop in Ruby: <br><pre><code class="Ruby">for n in 2..4 do
+p "n = #{n}" 
 end
 # Output:
 # n = 2
 # n = 3
 # n = 4
 </code></pre>
+      <br>
+			As we can see, FOR loops keep track of the incrementing for us in both Ruby and JavaScript. I actually prefer the JavaScript FOR loop because it takes 3 arguments: an incrementor, a conditional, and an action at the end of the loop. This lays out the iteration very clearly. Ruby's FOR takes an incrementor and an expression, but seems less robust. Then again, Ruby has many other options for iterating over a dataset.
+		</p>
 
-				As we can see, FOR loops keep track of the incrementing for us in both Ruby and JavaScript. I actually prefer the JavaScript FOR loop because it takes 3 arguments: an incrementor, a conditional, and an action at the end of the loop. This lays out the iteration very clearly. Ruby's FOR takes an incrementor and an expression, but seems less robust. Then again, Ruby has many other options for iterating over a dataset.
-			</p>
-
-			<div class="left-arrow">
-				<h4><a href="http://yoonis.github.io/blog/ruby-classes.html">&#8610; Previous Post</a></h4>
-			</div>
-			
-			<div class="right-arrow">	
-				<h4><a href="http://yoonis.github.io/blog/tech.html">Next Post &#8611;</a></h4>
-			</div>
-		</article>
+		<div class="left-arrow">
+			<h4><a href="http://yoonis.github.io/blog/ruby-classes.html">&#8610; Previous Post</a></h4>
+		</div>
+		
+		<div class="right-arrow">	
+			<h4><a href="http://yoonis.github.io/blog/tech.html">Next Post &#8611;</a></h4>
+		</div>
 	</section>
+  <div class="column medium-2"><pre> </pre></div>
 
 	<footer class="footer">
   		<p>(c) 2015 Eunice Do</p>
@@ -116,6 +138,13 @@ end
 
 	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
 
 </body>
 
