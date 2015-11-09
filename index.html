@@ -2,83 +2,88 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Eunice Do</title>
-	
-	<!-- Google Font -->
-	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  
+  <!-- Google Font -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-		<!-- Personal CSS pages -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/main-index.css">
+  <!-- Foundation Zurb -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/app.css">
+
+  <!-- Personal CSS pages -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main-index.css">
   
   <!-- HighlightJS Syntax Highlighter Min CSS -->
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/color-brewer.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/color-brewer.min.css">
 
-	<!-- IcoMoon Icon Font CSS -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/icons.css">
+  <!-- IcoMoon Icon Font CSS -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/icons.css">
 
-	<!-- Favicon -->
+  <!-- Favicon -->
   <link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico" />
+
+  <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
 </head>
 
 <body>
-
-	<header class="home">
-		<a href="http://yoonis.github.io/">Eunice Do</a>
-	</header>
-
-	<nav class="sidebar">
-		<ul>
-			<li><a href="http://yoonis.github.io/work/index.html">Work Experience</a></li>
-			<li>	
-				<ul>
-					<li><a href="#">Position A</a></li>
-				</ul>
-			</li>	
-			
-			<li><a href="http://yoonis.github.io/portfolio/index.html">Portfolio</a></li>
-			<li>	
-				<ul>
-					<li><a href="#">Project A</a></li>
-				</ul>
-			</li>	
-			
-			<li><a href="http://yoonis.github.io/blog/">The Soapbox</a></li>
-			<li>	
-				<ul>
-					<li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
-					<li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
-					<li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
-					<li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
-					<li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
-					<li><a href="http://yoonis.github.io/blog/">See More...</a></li>
-				</ul>
-			</li>	
-			
-			<li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming?</a></li>
-		</ul>
-	</nav>
-	
-	<section>
-
-		<div>
-			<img class="avatar" src="imgs/Anime.png" alt="My Avatar"/>
-		</div>
-
-		<article class="text">
-			<pre><code class="ruby">def bio
+  <div id="include-header"></div>
+  <div class="contain-to-grid fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/diversity.html">Women in Tech</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
   
+  <section>
+    <div class="row">
+      <div class="columns medium-9">
+        <pre>
+          <code class="ruby">def bio
   name = "Eunice Do"
-  
+
   locations = ["New York", "Salamanca, Spain"]
-  
+
   education = "BBA in International Business"
-  
+
   interests = ["gym", "Spanish", "drip coffee", "music"]
-  
+
   print "Hello from #{locations[0]}! My name is #{name}. 
   I have a #{education}, but recently discovered my 
   penchant for coding. Outside of dev life, some things 
@@ -86,27 +91,41 @@
   generously consuming #{interests[2]}, and 
   #{interests[3]}. I studied #{interests[1]} in 
   #{locations[1]}, and the tapas there are unrivaled."
+end
+          </code>
+        </pre>
+      </div>
+      <div class="columns medium-3">
+        <img class="avatar" src="imgs/Anime.png" alt="My Avatar"/>
+        <ul class="icon-links">
+          <li><a href="https://www.linkedin.com/in/edo11"><span class="icon-linkedin bump-up"></span></a></li>
+          <li><a href="https://github.com/Yoonis"><span class="icon-github"></span></a></li>
+          <li><a href="https://twitter.com/Eunice_Tries"><span class="icon-twitter"></span></a></li>
+        </ul>
+      </div>
+    </div>    
+  </section>
 
-end</code></pre><br>
+  <footer class="footer">
+      <p>(c) 2015 Eunice Do</p>
+  </footer>
 
-				<ul class="links">
-					<!-- <li class="important">Follow Me On:</li><br> -->
-					<li><a href="https://www.linkedin.com/in/edo11"><span class="icon-linkedin bump-up"></span></a></li>
-					<li><a href="https://github.com/Yoonis"><span class="icon-github"></span></a></li>
-					<li><a href="https://twitter.com/Eunice_Tries"><span class="icon-twitter"></span></a></li>
-				</ul>
+  <!-- Handlebars JS -->
+  <script type="text/javascript" src="bower_components/handlebars/handlebars.min.js"></script>
 
-		</article>
-		
-	</section>
+  <!-- HighlightJS JS -->
+  <script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 
-	<footer class="footer">
-  		<p>(c) 2015 Eunice Do</p>
-	</footer>
-
-	<!-- HighlightJS JS -->
-	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/foundation/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation('reflow'); 
+    $(document).ready(function(){
+      $("#include-header").load("templates/test_handlebars.html"); 
+    });
+  </script>
 
 </body>
 

@@ -3,65 +3,19 @@ html, body {
 	font-size: 1.1rem;
 	color: #668899;
 	box-sizing: border-box;
-	max-width: 100%;
-}
-
-.container {
-  margin: auto;
-  max-width: 800px;
-}
-
-.home {
-	font-size: 2.2rem;
-	padding: 20px 10px 30px 15px;
-}
-
-.home a {
-	color: #CC6699;
-	text-decoration: none;
-}
-
-.home a:hover {
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.sidebar {
-	float: left;
-	max-width: 30%;
-	margin-right: 40px;
-	padding-left: 20px;
-	padding-right: 40px;
-	border-right: 1px dashed #5C5C8A;
-	font-size: 1.1rem;
 }
 
 a:link {
-	color: #CC6699;
+	color: #5C5C8A;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #4095bf;
+	color: black;
 }
 
 a:hover {
 	text-decoration: underline;
-}
-
-nav ul {
-	padding-left: 0px;
-	margin: 10px 0px 5px 0px;
-}
-
-nav li {
-	padding-bottom: 13px;
-	list-style-type: none;
-}
-
-nav li ul {
-	margin-top: 0px;
-	padding-left: 25px;
 }
 
 .important {
