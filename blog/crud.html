@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CRUD</title>
+	<meta charset="UTF-8">
+
+    <!-- Foundation Zurb -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/app.css">
+    
+    <!-- Personal CSS -->
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  	
+  	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/mono-blue.min.css">
+</head>
+
+<body>
+  <div class="contain-to-grid sticky fixed">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="http://yoonis.github.io/">Eunice Do</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="left">
+          <li class="has-dropdown">
+            <a href="#">Work Experience</a>
+            <ul class="dropdown">
+              <li><a href="#">Job 1</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="#">Portfolio</a>
+            <ul class="dropdown">
+              <li><a href="#">Project A</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="http://yoonis.github.io/blog/">Blog</a>
+            <ul class="dropdown">
+              <li><a href="http://yoonis.github.io/blog/crud.html">Create, Read, Update, Delete</a></li>
+              <li><a href="http://yoonis.github.io/blog/tech.html">Functional Programming</a></li>
+              <li><a href="http://yoonis.github.io/blog/JavaScript.html">JavaScript Loops</a></li>
+              <li><a href="http://yoonis.github.io/blog/ruby-classes.html">Ruby Classes</a></li>
+              <li><a href="http://yoonis.github.io/blog/enumerable-methods.html">Enumerable of the Day</a></li>
+              <li><a href="http://yoonis.github.io/blog/">See More</a></li>
+            </ul>
+          </li>
+          <li><a href="http://yoonis.github.io/streaming/index.html">What's Streaming</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+	
+  <article id="page-top" class="row">
+  	<div class="columns medium-1"><pre> </pre></div>
+  	<section class="columns medium-10">
+  		<h1>C.R.U.D.</h1>
+  		<h4>11.21.15</h4>
+  		<p>
+  			Eat, sleep, rave, repeat. Eat, sleep, rave, repeat... Just kidding.<br>
+        <br>
+        Create, read, update, delete. AKA <span class="important">CRUD.</span><br>
+        <br>
+        This is a concept we should be familiar with for both the Array and Hash collection types. Today's post will touch upon some handy methods that allow us to manipulate both kinds of data structures.
+  		</p>
+
+      <section class="row">
+        <div class="columns medium-6">
+          <h2>Arrays</h2>
+          <p><span class='important'>Create:</span><br>
+            Array.new(optional number of elements, optional default element value)<br>
+            Array.new(optional number of elements) {optional default value that the block evaluates to}
+            <pre><code class='ruby'>Array.new #=> []
+Array.new(3) #=> [nil, nil, nil]
+Array.new(3, "lol") #=> ["lol", "lol", "lol"]
+Array.new(2) { Hash.new } #=> [{}, {}]
+Array.new(3) { Array.new(2) {rand(1..10)} } 
+#=> [[4, 1], [10, 8], [2, 9]]
+</code></pre><br>
+            <br>
+            <span class='important'>Read:</span><br>
+            array[index number]<br>
+            array[range of indices]<br>
+            array.fetch(index number)<br>
+            array.fetch(index number, optional personal error message)<br>
+            array.first<br>
+            array.last<br>
+            array.length<br>
+            array.empty?<br>
+            array.include?("the element you're in search of")
+            <pre><code class='ruby'>array = ['a', 'b', 'c', 'd']
+array[0] #=> 'a'
+array[0..2] #=> ['a', 'b', 'c']
+
+array.fetch(1) #=> 'b'
+array.fetch(50, "This is an Index Error") 
+#=> "This is an Index Error"
+
+array.first #=> 'a'
+array.last #=> 'd'
+
+array.length #=> 4
+
+array.empty? #=> false
+
+array.include?("c") #=> true
+</code></pre><br>
+            <br>
+            <span class='important'>Update:</span><br>
+            array.push(element) OR array << element<br>
+            array.unshift(element)<br>
+            array.pop<br>
+            array.shift<br>
+            array.insert(index number, new elements to be added)<br>
+            array.select { |var| conditional } OR array.select!<br>
+            array.reject { |var| conditional } OR array.reject!
+            <pre><code class='ruby'>array = [1, 2, 3, 4]
+array.push('e') #=> [1, 2, 3, 4, 'e']
+array.unshift(9) #=> [9, 1, 2, 3, 4]
+array.pop #=> 4 and array = [1, 2, 3]
+array.shift #=> 1 and array = [2, 3, 4]
+array.insert(3, 'a', 'b') #=> [1, 2, 3, 'a', 'b', 4]
+array.select { |num| num > 1 } #=> [2, 3, 4]
+array.reject { |num| num > 2 } #=> [1, 2]
+</code></pre><br>
+            <br>
+            <span class='important'>Delete:</span><br>
+            array.delete(element)<br>
+            array.delete_at(index number)<br>
+            array.delete_if { |var| conditional }<br>
+            array.keep_if { |var| conditional }
+            <pre><code class='ruby'>array = [1, 2, 3, 4]
+array.delete(2) #=> array = [1, 3, 4]
+array.delete_at(3) #=> array = [1, 2, 3]
+array.delete_if { |num| num < 4 } #=> array = [4]
+array.keep_if { |num| num < 4 } #=> array = [1, 2, 3]
+</code></pre><br>
+          </p>
+        </div>
+
+        <div class="columns medium-6">
+          <h2>Hashes</h2>
+          <p>
+            <span class='important'>Create:</span><br>
+            Hash[key, value]<br>
+            Hash.new { |hash, key| hash[key] = value }
+            <pre><code class='ruby'>Hash[:fish, "salmon", :herb, "rosemary"] 
+#=> {fish: "salmon", herb: "rosemary"}
+
+recipe = Hash.new {|recipe, fish| recipe[fish]="salmon"} 
+#=> recipe[:arbitrary_key] = "salmon"
+</code></pre><br>
+            <br>
+            <span class='important'>Read:</span><br>
+            hash.each_key { |key| block action }<br>
+            hash.each_value { |value| block action }<br>
+            hash.each { |key, value| block action }<br>
+            hash.select { |key, value| key or value conditional }
+            hash.key(value to search for)<br>
+            hash.keys<br>
+            hash.values<br>
+            hash.length
+            <pre><code class='ruby'>recipe = {fish: "salmon", herb: "rosemary"}
+
+recipe.each_key { |ingredient| puts ingredient }
+#=> "fish"
+#=> "herb"
+
+recipe.each_value { |type| puts type }
+#=> "salmon"
+#=> "rosemary"
+
+recipe.each { |ingredient, type| puts "The #{ingredient} is #{type}." }
+#=> "The fish is salmon."
+#=> "The herb is rosemary."
+
+recipe.select { |ingredient, type| type == "salmon" }
+#=> {fish: "salmon"}
+
+recipe.key("tuna") #=> nil
+recipe.key("rosemary") #=> :herb
+
+recipe.keys #=> [:fish, :herb]
+
+recipe.values #=> ["salmon", "rosemary"]
+
+recipe.length #=> 2
+</code></pre><br>
+            <br>
+            <span class='important'>Update:</span><br>
+            hash.flatten(optional level of flattening)<br>
+            hash.invert
+            <pre><code class='ruby'>recipe = {fish: "salmon", herb: ["rosemary", "thyme"], salt: "sea"}
+
+recipe.flatten 
+#=> [:fish, "salmon", :herb, ["rosemary", "thyme"], :salt, "sea"]
+recipe.flatten(2) 
+#=> [:fish, "salmon", :herb, "rosemary", "thyme", :salt, "sea"]
+
+recipe.invert 
+#=> {"salmon"=>:fish, ["rosemary", "thyme"]=>:herb, "sea"=>:salt}
+</code></pre><br>
+            <br>
+            <span class='important'>Delete:</span><br>
+            hash.clear<br>
+            hash.delete(key)<br>
+            hash.reject! OR hash.delete_if { |key, value| conditional }<br>
+            hash.select! OR hash.keep_if { |key, value| conditional }
+            <pre><code class='ruby'>recipe = {fish: "salmon", herb: "rosemary"}
+
+recipe.clear #=> recipe = {}
+
+recipe.delete(:fish) 
+#=> "salmon" and recipe = {herb: "rosemary"}
+
+recipe.delete_if { |ingredient, type| type == "rosemary" }
+#=> recipe = {fish: "salmon"}
+
+recipe.keep_if { |ingredient, type| type == "rosemary" }
+#=> recipe = {herb: "rosemary"}
+</code></pre><br>
+            <br>
+          </p>
+        </div>
+      </section>
+
+  		<div class="left-arrow">
+  			<h4><a href="http://yoonis.github.io/blog/tech.html">&#8610; Previous Post</a></h4>
+  		</div>
+  		<div class="right-arrow">	
+  			<h4><a href="#">Next Post &#8611;</a></h4>
+  		</div>
+    </section>
+  	
+  	<div class="columns medium-1"><pre> </pre></div>
+  </article>
+
+	<footer class="footer">
+		<p>(c) 2015 Eunice Do</p>
+	</footer>
+
+	<script src="http://cdn.jsdelivr.net/highlight.js/8.8.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+  <!-- Foundation Zurb -->
+  <script type="text/javascript" src="../bower_components/foundation/js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/foundation/js/foundation.min.js"></script>
+  <script> 
+    $(document).foundation(''); 
+  </script>
+</body>
+</html>
