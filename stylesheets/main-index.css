@@ -7,14 +7,14 @@
 
 .avatar {
 	margin-top: 20px;
-	margin-left: 10px;
 }
 
 .icon-links li {
 	display: inline-block;
 	margin-top: 1rem;
 	font-size: 1.2rem;
-	margin-right: 1rem;
+	margin-right: 2rem;
+	margin-left: 1.2rem;
 	font-color: #5C5C8A;
 }
 
