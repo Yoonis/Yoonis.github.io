@@ -181,7 +181,7 @@ select {
 /* line 228, ../bower_components/foundation/scss/foundation/components/_grid.scss */
 .row {
   margin: 0 auto;
-  max-width: 62.5rem;
+  /*max-width: 0 rem;*/
   width: 100%;
 }
 /* line 239, ../bower_components/foundation/scss/foundation/components/_global.scss */
